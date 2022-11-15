@@ -8,12 +8,14 @@ skewness = 0
 kurtosis = 1
 
 
-
+# t range between 0.0 - 1.0
 def get_normalized_unmodified_gausian_random(t:float) -> float:
     v = 1.0 - (1.0 - ((float(abs(0.5 - t)) - 0.5)/0.5)**2)**2
     return v
 
-
+# t range between 0.0 - 1.0
+# skewness range between -1.0 - 1.0
+# krutosis range between 0.0 - positive infinity
 def get_normalized_modified_gausian_random(t:float, skewness:float, kurtosis:float) -> float:
     skewness = min(1.0, max(-1.0, skewness))
     t = min(1.0, max(0.0, t - skewness * 0.5))
