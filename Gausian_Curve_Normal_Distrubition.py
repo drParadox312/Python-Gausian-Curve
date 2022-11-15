@@ -26,12 +26,12 @@ def get_normalized_modified_gausian_random(t:float, skewness:float, kurtosis:flo
 
 
 def draw_graph() -> None:
-    x_label_range = x_axis_max - x_axis_min
+    x_axis_range = x_axis_max - x_axis_min
     x_axis = []
     y_axis = []
     for i in range(x_axis_length):
         t = float(i) / float(x_axis_length)
-        x = x_axis_min + x_label_range * t
+        x = x_axis_min + x_axis_range * t
         x_axis.append(x)
         y = get_normalized_modified_gausian_random(t, skewness, kurtosis)
         y_axis.append(y)
