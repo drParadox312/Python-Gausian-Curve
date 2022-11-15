@@ -19,7 +19,7 @@ def get_normalized_unmodified_gausian_value(t:float) -> float:
 
 # t ranges between 0.0 - 1.0
 # skewness ranges between -1.0 - 1.0
-# krutosis ranges between 0.0 - positive infinity
+# kurtosis ranges between 0.0 - positive infinity
 # values are returned between 0.0 - 1.0
 def get_normalized_modified_gausian_value(t:float, skewness:float, kurtosis:float) -> float:
     skewness = min(1.0, max(-1.0, skewness))
