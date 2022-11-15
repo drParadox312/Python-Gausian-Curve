@@ -2,8 +2,8 @@ import matplotlib.pyplot as plot
 import random
 
 
-skewness = 0 # change value in range of "-1.0 - 1.0" to effect
-kurtosis = 1 # change value in range of "0.0 - positive infinity" to effect
+skewness = 0 # change value in range of "-1.0 - 1.0" to see effect
+kurtosis = 1 # change value in range of "0.0 - positive infinity" to see effect
 
 
 x_axis_length = 100
