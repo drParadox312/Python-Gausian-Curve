@@ -20,6 +20,7 @@ def get_normalized_modified_gausian_random(t:float, skewness:float, kurtosis:flo
     skewness = min(1.0, max(-1.0, skewness))
     t = min(1.0, max(0.0, t - skewness * 0.5))
     v = 1.0 - (1.0 - ((float(abs(0.5 - t)) - 0.5)/0.5)**2)**2
+    kurtosis = max(0.0, kurtosis)
     v = v**kurtosis
     return v
 
