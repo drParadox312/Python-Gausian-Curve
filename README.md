@@ -1,1 +1,1 @@
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/drParadox312/Python-Gausian-Curve-Normal-Distrubition/blob/main/screenshot.png)
