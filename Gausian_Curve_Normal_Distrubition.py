@@ -2,13 +2,13 @@ import matplotlib.pyplot as plot
 import random
 
 
-skewness = 0.0 # change value in range of "-1.0 - 1.0" to see effect
-kurtosis = 1.0 # change value in range of "0.0 - positive infinity" to see effect
+skewness = 0 # change value in range of "-1.0 - 1.0" to see effect
+kurtosis = 1 # change value in range of "0.0 - positive infinity" to see effect
 
 
 x_axis_length = 100
-x_axis_min = 0.0
-x_axis_max = 100.0
+x_axis_min = 0
+x_axis_max = 100
 
 
 
@@ -20,17 +20,13 @@ def get_normalized_gausian_value(t:float, skewness=0.0, kurtosis=1.0) -> float:
     kurtosis = max(0.0, kurtosis)
     t = min(1.0, max(0.0, t - skewness * 0.5))
     v = 1.0 - (1.0 - ((float(abs(0.5 - t)) - 0.5)/0.5)**2)**2
-    if(kurtosis > 0):
-        v = v**kurtosis
-    else:
-        v = 0.0
+    v = v**kurtosis
     return v
 
 
 def get_normalized_gausian_random(skewness=0.0, kurtosis=1.0) -> float:
     t = random.uniform(0.0, 1.0)
     return get_normalized_gausian_value(t, skewness, kurtosis)
-
 
 
 def draw_graph() -> None:
@@ -47,6 +43,4 @@ def draw_graph() -> None:
     plot.plot(x_axis, y_axis, color="g")
     plot.show()
 
-
-while(True):
-    draw_graph()
+draw_graph()
