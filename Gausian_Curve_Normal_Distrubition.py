@@ -19,7 +19,7 @@ def get_normalized_gausian_value(t:float, skewness=0.0, kurtosis=1.0) -> float:
     skewness = min(1.0, max(-1.0, skewness))
     kurtosis = max(0.0, kurtosis)
     t = min(1.0, max(0.0, t - skewness * 0.5))
-    v = 1.0 - (1.0 - ((float(abs(0.5 - t)) - 0.5)/0.5)**2)**2
+    v = 1.0 - (1.0 - ((abs(0.5 - t) - 0.5)/0.5)**2)**2
     v = v**kurtosis
     return v
 
